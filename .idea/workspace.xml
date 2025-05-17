@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00f060b7-4217-4cd7-92c2-343d75843d88" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 1/DHT11/DHT11.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 1/US015/US015.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 2/GET/GETopenweathermap.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 2/HiveMQ/HiveMQ/HiveMQ.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 2/POST/PostThingspeak/PostThingspeak.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 3/Blynk and LED.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../APLHABEZ.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arduino IDE.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/img/certificate_awssb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/img/certificate_front-end.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/img/certificate_giaykhen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/img/certificate_pentest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/img/os.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/img/profile.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/bootstrap-portfolio-main/assets/img/soft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BTL_LapTrinhWeb/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bài tập về nhà_Ngô Anh Quý_B21DCAT159.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bài tập về nhà_Ngô Anh Quý_B21DCAT159.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CiscoPacketTracer_811_Windows_64bit.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Iot (1)/HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Iot (1)/IOT_humidity_and_temperature_management" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Iot (1)/images/Deckboard-Setup-3.0.8.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Iot (1)/images/Phân nhóm thuc hanh môn PTMĐ nhóm 02(Thầy Duy) (1).xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Jframe/Jframe.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Connection/Backdoor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Connection/Trojan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiDebug/CheckBlacklistedWindowsNames.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiDebug/DebuggingCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiDebug/IsDebuggerPresent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiDebug/ParentAntiDebug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiDebug/RemoteDebugger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/KVMCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/MonitorMetrics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/ParallelsCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/QEMUCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/RecentFileActivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/TriageCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/USBCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/UsernameCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/VMArtifacts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/VMWareDetection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/VirtualboxDetection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/AntiVirtualization/VirtualizingCheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/Features.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/Hibernation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Features/Infection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Keylogger/Keylogger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/Model/wallpaper.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/structure.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PTTKHTTT-PTIT-main.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Socket/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Socket/Client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Socket/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Socket/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Socket/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Socket/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH3/TH3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Test/Test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tài liệu/goals.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arduino-ide_nightly-20240925_Windows_64bit.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../burp-wordlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../chrome_100_percent.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../code/test001.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../code/test001.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../forensics_an_unusual_sighting.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../goals.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gui_test/gui_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imodule-ptit-hping3.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kali-linux-2024.2-vmware-amd64.vmwarevm/kali-linux-2024.2-vmware-amd64-16.scoreboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../network-basics (1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vk_swiftshader_icd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../~$tkhttt.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2xBwvWrCaLStp4fMILdBYfqRGgx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/RepoGithub/todoApp",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00f060b7-4217-4cd7-92c2-343d75843d88" name="Changes" comment="" />
+      <created>1747425005517</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747425005517</updated>
+    </task>
+    <servers />
+  </component>
+</project>
