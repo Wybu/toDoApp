@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00f060b7-4217-4cd7-92c2-343d75843d88" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaseConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 1/DHT11/DHT11.ino" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 1/US015/US015.ino" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../03 bài thí nghiệm IoT và Code mẫu/Bài 2/GET/GETopenweathermap.ino" beforeDir="false" />
@@ -83,6 +85,9 @@
       <change beforePath="$PROJECT_DIR$/../../MalwareAnalyst-101-main/structure.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PTTKHTTT-PTIT-main.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Socket/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Socket/Client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Socket/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Socket/Server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Socket/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Socket/main.py" afterDir="false" />
@@ -118,6 +123,9 @@
   "associatedIndex": 2
 }]]></component>
   <component name="ProjectId" id="2xBwvWrCaLStp4fMILdBYfqRGgx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -131,7 +139,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/RepoGithub/todoApp",
+    "last_opened_file_path": "E:/RepoGithub/toDoApp/app",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
