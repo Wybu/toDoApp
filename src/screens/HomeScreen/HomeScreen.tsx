@@ -1,10 +1,12 @@
 // filepath: e:\todoapp\src\screens\HomeScreen\HomeScreen.tsx
 import React, {useState, useEffect} from "react";
-import { SafeAreaView, View, ScrollView, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import { SafeAreaView, View, ScrollView, Text, Image, TextInput, TouchableOpacity, Modal, Animated, Dimensions } from "react-native";
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import homeScreenHandlers from "./homescreenfunc";
 import styles from "./homescreenstyles";
+
+const { width: screenWidth } = Dimensions.get('window');
 
 /**
  * Màn hình chính - Home Screen
@@ -13,15 +15,19 @@ const HomeScreen = (props) => {
   // State management
   const [searchText, setSearchText] = useState('');
   const [userName, setUserName] = useState('User');
+  const [userEmail, setUserEmail] = useState('');
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [slideAnim] = useState(new Animated.Value(screenWidth));
 
   // Fetch user name from Firestore when component mounts
   useEffect(() => {
     const fetchUserName = async () => {
       const currentUser = auth().currentUser;
       if (currentUser) {
+        setUserEmail(currentUser.email);
         try {
           const userDoc = await firestore()
             .collection('users')
@@ -113,6 +119,23 @@ const HomeScreen = (props) => {
     setSearchText(text);
   };
 
+  // Modal handlers - using functions from homescreenfunc
+  const handleAvatarPress = () => {
+    homeScreenHandlers.handleAvatarPress(setModalVisible, slideAnim);
+  };
+
+  const handleCloseModal = () => {
+    homeScreenHandlers.handleCloseModal(slideAnim, screenWidth, setModalVisible);
+  };
+
+  const handleLogout = () => {
+    homeScreenHandlers.handleLogout(handleCloseModal);
+  };
+
+  const handleViewProfile = () => {
+    homeScreenHandlers.handleViewProfile();
+  };
+
   // Helper function to format date
   const formatDate = (timestamp) => {
     if (!timestamp) return 'N/A';
@@ -151,7 +174,7 @@ const HomeScreen = (props) => {
             <Text style={styles.welcomeText}>{"Welcome Back!"}</Text>
             <Text style={styles.userName}>{userName}</Text>
           </View>
-          <TouchableOpacity onPress={homeScreenHandlers.handleAvatarPress}>
+          <TouchableOpacity onPress={handleAvatarPress}>
             <Image
               source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/ic62yv4h_expires_30_days.png"}}
               resizeMode={"stretch"}
@@ -267,6 +290,63 @@ const HomeScreen = (props) => {
           <Text style={[styles.navText, {textAlign: "center"}]}>{"Notification"}</Text>
         </TouchableOpacity>
       </View>
+
+      {/* Avatar Modal */}
+      <Modal
+        animationType="none"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={handleCloseModal}
+      >
+        <View style={styles.modalOverlay}>
+          <TouchableOpacity
+            style={styles.modalBackground}
+            activeOpacity={1}
+            onPress={handleCloseModal}
+          />
+          <Animated.View
+            style={[
+              styles.modalContent,
+              {
+                transform: [{ translateX: slideAnim }]
+              }
+            ]}
+          >
+            {/* Modal Header */}
+            <View style={styles.modalHeader}>
+              <TouchableOpacity onPress={handleCloseModal} style={styles.closeButton}>
+                <Text style={styles.closeButtonText}>×</Text>
+              </TouchableOpacity>
+            </View>
+
+            {/* User Info */}
+            <View style={styles.userInfoContainer}>
+              <Image
+                source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/ic62yv4h_expires_30_days.png"}}
+                resizeMode={"stretch"}
+                style={styles.modalAvatarImage}
+              />
+              <Text style={styles.modalUserName}>{userName}</Text>
+              <Text style={styles.modalUserEmail}>{userEmail}</Text>
+            </View>
+
+            {/* Menu Options */}
+            <View style={styles.menuContainer}>
+              <TouchableOpacity style={styles.menuItem} onPress={handleViewProfile}>
+                <Text style={styles.menuItemText}>View Profile</Text>
+                <Text style={styles.menuItemArrow}>›</Text>
+              </TouchableOpacity>
+
+              <View style={styles.menuDivider} />
+
+              <TouchableOpacity style={styles.menuItem} onPress={handleLogout}>
+                <Text style={[styles.menuItemText, styles.logoutText]}>Logout</Text>
+                <Text style={styles.menuItemArrow}>›</Text>
+              </TouchableOpacity>
+            </View>
+          </Animated.View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };

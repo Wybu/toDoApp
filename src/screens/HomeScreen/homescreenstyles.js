@@ -1,5 +1,7 @@
 // filepath: E:\demo\src\screens\HomeScreen\homescreenstyles.js
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
@@ -153,6 +155,93 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 26,
     fontWeight: "bold",
+  },
+  // Modal Styles
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    flexDirection: 'row',
+  },
+  modalBackground: {
+    flex: 1,
+  },
+  modalContent: {
+    width: screenWidth * 0.8,
+    height: screenHeight,
+    backgroundColor: '#FFFFFF',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: -2, height: 0 },
+    shadowOpacity: 0.25,
+    shadowRadius: 10,
+  },
+  modalHeader: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    paddingHorizontal: 20,
+    paddingTop: 50,
+    paddingBottom: 20,
+    backgroundColor: '#04247C',
+  },
+  closeButton: {
+    padding: 5,
+  },
+  closeButtonText: {
+    color: '#FFFFFF',
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
+  userInfoContainer: {
+    alignItems: 'center',
+    paddingVertical: 30,
+    paddingHorizontal: 20,
+    backgroundColor: '#04247C',
+  },
+  modalAvatarImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    marginBottom: 15,
+  },
+  modalUserName: {
+    color: '#FFFFFF',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  modalUserEmail: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    opacity: 0.8,
+  },
+  menuContainer: {
+    flex: 1,
+    paddingTop: 20,
+    backgroundColor: '#FFFFFF',
+  },
+  menuItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 20,
+    paddingHorizontal: 25,
+  },
+  menuItemText: {
+    fontSize: 18,
+    color: '#333333',
+    fontWeight: '500',
+  },
+  menuItemArrow: {
+    fontSize: 20,
+    color: '#CCCCCC',
+  },
+  menuDivider: {
+    height: 1,
+    backgroundColor: '#EEEEEE',
+    marginHorizontal: 25,
+  },
+  logoutText: {
+    color: '#FF4444',
   },
 });
 
