@@ -13,6 +13,9 @@ const HomeScreen = (props) => {
   // State management
   const [searchText, setSearchText] = useState('');
   const [userName, setUserName] = useState('User');
+  const [projects, setProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Fetch user name from Firestore when component mounts
   useEffect(() => {
@@ -41,6 +44,104 @@ const HomeScreen = (props) => {
     fetchUserName();
   }, []);
 
+  // Fetch user's projects
+  useEffect(() => {
+    const fetchUserProjects = async () => {
+      const currentUser = auth().currentUser;
+      if (currentUser) {
+        try {
+          // First, get the current user's UID
+          const userQuery = await firestore()
+            .collection('users')
+            .where('email', '==', currentUser.email)
+            .get();
+
+          if (!userQuery.empty) {
+            const userUID = userQuery.docs[0].data().uid;
+
+            // Query projects where user is either a member or leader
+            const projectsQuery = await firestore()
+              .collection('projects')
+              .where('status', '==', 'active')
+              .get();
+
+            const userProjects = [];
+
+            projectsQuery.forEach(doc => {
+              const projectData = doc.data();
+              const isParticipant = projectData.members?.includes(userUID) ||
+                                   projectData.leaders?.includes(userUID);
+
+              if (isParticipant) {
+                userProjects.push({
+                  id: doc.id,
+                  ...projectData
+                });
+              }
+            });
+
+            setProjects(userProjects);
+            setFilteredProjects(userProjects); // Initialize filtered projects
+          }
+        } catch (error) {
+          console.error('Error fetching projects:', error);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchUserProjects();
+  }, []);
+
+  // Handle search functionality
+  useEffect(() => {
+    if (searchText.trim() === '') {
+      // If search is empty, show all projects
+      setFilteredProjects(projects);
+    } else {
+      // Filter projects based on search text
+      const filtered = projects.filter(project =>
+        project.name.toLowerCase().includes(searchText.toLowerCase())
+      );
+      setFilteredProjects(filtered);
+    }
+  }, [searchText, projects]);
+
+  // Handle search input change
+  const handleSearchChange = (text) => {
+    setSearchText(text);
+  };
+
+  // Helper function to format date
+  const formatDate = (timestamp) => {
+    if (!timestamp) return 'N/A';
+
+    let date;
+    if (timestamp.toDate) {
+      // Firestore timestamp
+      date = timestamp.toDate();
+    } else if (timestamp instanceof Date) {
+      date = timestamp;
+    } else {
+      // String date
+      date = new Date(timestamp);
+    }
+
+    return date.toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric'  // Added year to display format
+    });
+  };
+
+  // Calculate total members count
+  const getTotalMembersCount = (project) => {
+    const membersCount = project.members ? project.members.length : 0;
+    const leadersCount = project.leaders ? project.leaders.length : 0;
+    return membersCount + leadersCount;
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       {/* Phần tiêu đề cố định */}
@@ -66,13 +167,10 @@ const HomeScreen = (props) => {
             style={styles.searchIcon}
           />
           <TextInput
-            placeholder="Search tasks"
+            placeholder="Search projects"
             placeholderTextColor="#FFFFFF"
             value={searchText}
-            onChangeText={(text) => {
-              setSearchText(text);
-              homeScreenHandlers.handleSearch(text);
-            }}
+            onChangeText={handleSearchChange}
             style={styles.searchInput}
           />
         </View>
@@ -82,83 +180,38 @@ const HomeScreen = (props) => {
 
       {/* Phần danh sách dự án cuộn được */}
       <ScrollView style={styles.scrollViewContainer}>
-        <TouchableOpacity
-          style={styles.projectCard}
-          onPress={() => homeScreenHandlers.handleProjectPress('Mobile App Wireframe')}
-        >
-          <Text style={styles.projectTitle}>{"Mobile App Wireframe"}</Text>
-          <Text style={styles.teamMembersText}>{"Team members"}</Text>
-          <View style={styles.teamMembersContainer}>
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/3j3qien5_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={styles.memberAvatar}
-            />
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/of57w88b_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={[styles.memberAvatar, {marginRight: 3}]}
-            />
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/dmdfiab2_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={[styles.memberAvatar, {marginRight: 0, marginVertical: 1}]}
-            />
+        {loading ? (
+          <View style={styles.loadingContainer}>
+            <Text style={styles.loadingText}>Loading projects...</Text>
           </View>
-          <Text style={styles.dueDate}>{"Due on : 21 March"}</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.projectCard}
-          onPress={() => homeScreenHandlers.handleProjectPress('Real Estate App Design')}
-        >
-          <Text style={styles.projectTitle}>{"Real Estate App Design"}</Text>
-          <Text style={styles.teamMembersText}>{"Team members"}</Text>
-          <View style={styles.teamMembersContainer}>
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/vb5m3om8_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={styles.memberAvatar}
-            />
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/0ctibh5j_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={[styles.memberAvatar, {marginRight: 3}]}
-            />
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/1jofdgzz_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={[styles.memberAvatar, {marginRight: 0, marginVertical: 1}]}
-            />
+        ) : filteredProjects.length > 0 ? (
+          filteredProjects.map((project) => (
+            <TouchableOpacity
+              key={project.id}
+              style={styles.projectCard}
+              onPress={() => homeScreenHandlers.handleProjectPress(project.name, project.id, props.navigation)}
+            >
+              <Text style={styles.projectTitle}>{project.name}</Text>
+              <Text style={styles.projectInfo}>
+                {`${getTotalMembersCount(project)} members`}
+              </Text>
+              <Text style={styles.projectDateInfo}>
+                {`Start: ${formatDate(project.startDate)}`}
+              </Text>
+              <Text style={styles.projectDateInfo}>
+                {`End: ${formatDate(project.endDate)}`}
+              </Text>
+            </TouchableOpacity>
+          ))
+        ) : (
+          <View style={styles.emptyContainer}>
+            <Text style={styles.emptyText}>
+              {searchText.trim() !== ''
+                ? `No projects found matching "${searchText}"`
+                : "No active projects found"}
+            </Text>
           </View>
-          <Text style={styles.dueDate}>{"Due on : 20 June"}</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.projectCard}
-          onPress={() => homeScreenHandlers.handleProjectPress('Dashboard & App Design')}
-        >
-          <Text style={styles.projectTitle}>{"Dashboard & App Design"}</Text>
-          <Text style={styles.teamMembersText}>{"Team members"}</Text>
-          <View style={styles.teamMembersContainer}>
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/r6lr3mjd_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={[styles.memberAvatar, {marginRight: 3}]}
-            />
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/um3twmrd_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={[styles.memberAvatar, {marginRight: 3}]}
-            />
-            <Image
-              source={{uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/ahfvssVHBU/5oru4vxa_expires_30_days.png"}}
-              resizeMode={"stretch"}
-              style={[styles.memberAvatar, {marginRight: 0, marginVertical: 1}]}
-            />
-          </View>
-          <Text style={styles.dueDate}>{"Due on : 04 August"}</Text>
-        </TouchableOpacity>
+        )}
       </ScrollView>
 
       {/* Thanh điều hướng cố định ở dưới */}

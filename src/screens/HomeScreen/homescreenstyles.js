@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
   projectCard: {
     alignItems: "flex-start",
     backgroundColor: "#446ADD",
-    paddingVertical: 9,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
     marginBottom: 15,
     marginHorizontal: 22,
     borderRadius: 5,
@@ -78,29 +79,39 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 21,
     fontWeight: "bold",
-    marginBottom: 7,
-    marginLeft: 10,
+    marginBottom: 8,
   },
-  teamMembersText: {
+  projectInfo: {
     color: "#FFFFFF",
     fontSize: 14,
-    marginBottom: 6,
-    marginLeft: 10,
+    marginBottom: 4,
   },
-  teamMembersContainer: {
-    flexDirection: "row",
-    marginBottom: 12,
-    marginLeft: 11,
-  },
-  memberAvatar: {
-    width: 20,
-    height: 20,
-    marginRight: 2,
-  },
-  dueDate: {
+  projectDateInfo: {
     color: "#FFFFFF",
-    fontSize: 14,
-    marginLeft: 10,
+    fontSize: 12,
+    marginBottom: 2,
+    opacity: 0.9,
+  },
+  loadingContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 50,
+  },
+  loadingText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+  },
+  emptyContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 50,
+  },
+  emptyText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    textAlign: "center",
   },
   navigationBar: {
     flexDirection: "row",

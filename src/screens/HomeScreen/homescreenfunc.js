@@ -18,26 +18,42 @@ const homeScreenHandlers = {
    * Xử lý khi chọn một dự án
    * @param {string} projectName Tên dự án được chọn
    */
-  handleProjectPress: (projectName) => {
-    Alert.alert(`${projectName} được chọn`);
-  },
-
-  /**
-   * Xử lý khi người dùng tìm kiếm
-   * @param {string} searchText Nội dung tìm kiếm
-   */
-  handleSearch: (searchText) => {
-    console.log('Tìm kiếm:', searchText);
-    // Xử lý tìm kiếm ở đây
-  },
+   handleProjectPress: (projectName, projectId, navigation) => {
+      console.log('Project pressed:', projectName, 'ID:', projectId);
+      if (navigation) {
+        navigation.navigate('ProjectManagement', {
+          projectName: projectName,
+          projectId: projectId
+        });
+      } else {
+        Alert.alert('Lỗi', 'Không thể chuyển đến');
+      }
+    },
 
   /**
    * Xử lý khi nhấn vào các nút điều hướng
    * @param {string} buttonName Tên nút được nhấn
    */
-  handleNavigation: (buttonName) => {
-    Alert.alert(`${buttonName} được chọn`);
-  },
+ handleNavigation: (tabName) => {
+     console.log(`Navigate to ${tabName}`);
+     // Thêm logic điều hướng tương ứng
+     switch (tabName) {
+       case 'Home':
+         // Đã ở trang Home
+         break;
+       case 'Chat':
+         // Điều hướng đến Chat
+         break;
+       case 'Calendar':
+         // Điều hướng đến Calendar
+         break;
+       case 'Notification':
+         // Điều hướng đến Notification
+         break;
+       default:
+         console.log('Unknown navigation tab:', tabName);
+     }
+   },
 
   /**
    * Xử lý khi nhấn nút thêm mới (+)
@@ -52,5 +68,3 @@ const homeScreenHandlers = {
 };
 
 export default homeScreenHandlers;
-
-

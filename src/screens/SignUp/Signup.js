@@ -123,11 +123,11 @@ const SignupScreen = (props) => {
 						)}
 					</View>
 
-					{/* Send code button */}
+
 					<TouchableOpacity
 						style={styles.sendCodeButton}
 						onPress={onSendCode}>
-						<Text style={styles.sendCodeText}>{"Gửi mã"}</Text>
+						<Text style={styles.sendCodeText}>{"Tiếp tục"}</Text>
 					</TouchableOpacity>
 
 					{/* Login link */}

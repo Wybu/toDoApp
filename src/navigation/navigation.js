@@ -8,6 +8,7 @@ import auth from '@react-native-firebase/auth';
 import Login from '../screens/Login/Login';
 import Signup from '../screens/SignUp/Signup';
 import UserInfor from '../screens/UserInfor/Userinfor';
+import ProjectManagement from '../screens/ProjectManagement/ProjectManagement';
 
 
 const AppNavigation = () => {
@@ -30,6 +31,7 @@ const AppNavigation = () => {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="NewProject" component={NewProject} />
+            <Stack.Screen name="ProjectManagement" component={ProjectManagement} />
         </Stack.Navigator>
     );
 
@@ -50,4 +52,5 @@ const AppNavigation = () => {
 };
 
 export default AppNavigation;
+
 
