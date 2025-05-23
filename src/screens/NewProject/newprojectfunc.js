@@ -524,8 +524,3 @@ export const useNewProjectFunctions = (props) => {
     };
   };
 
-
-
-
-
-
