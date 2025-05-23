@@ -1,8 +1,23 @@
 import React from 'react';
-import AppNavigation from './src/navigation/navigation';
+import { SafeAreaView } from 'react-native';
+import { TuongTacNhomScreen } from './src/modules/TuongTacNhom/TuongTacNhomScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
-  return <AppNavigation />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name="TuongTacNhom" 
+          component={TuongTacNhomScreen}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
 export default App;
