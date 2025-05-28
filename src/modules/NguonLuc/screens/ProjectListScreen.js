@@ -10,24 +10,11 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-interface ProjectMember {
-  id: string;
-  avatar: string;
-  name: string;
-}
-
-interface Project {
-  id: string;
-  title: string;
-  members: ProjectMember[];
-  deadline: string;
-}
-
 const ProjectListScreen = () => {
   const navigation = useNavigation();
 
   // Mock data - sẽ được thay thế bằng data thật từ API
-  const projects: Project[] = [
+  const projects = [
     {
       id: '1',
       title: 'Mobile App Wireframe',
@@ -73,7 +60,7 @@ const ProjectListScreen = () => {
     },
   ];
 
-  const ProjectCard = ({ project }: { project: Project }) => (
+  const ProjectCard = ({ project }) => (
     <TouchableOpacity
       style={styles.projectCard}
       onPress={() => navigation.navigate('ResourceDetail', { projectId: project.id })}
@@ -121,13 +108,22 @@ const ProjectListScreen = () => {
       </ScrollView>
 
       <View style={styles.bottomNav}>
-        <TouchableOpacity style={styles.navItem}>
+        <TouchableOpacity 
+          style={styles.navItem}
+          onPress={() => navigation.navigate('Home')}
+        >
           <Text style={styles.navIcon}>🏠</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.navItem}>
+        <TouchableOpacity 
+          style={styles.navItem}
+          onPress={() => navigation.navigate('Chat')}
+        >
           <Text style={styles.navIcon}>💬</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.navItem}>
+        <TouchableOpacity 
+          style={styles.navItem}
+          onPress={() => navigation.navigate('Notification')}
+        >
           <Text style={styles.navIcon}>🔔</Text>
         </TouchableOpacity>
       </View>
